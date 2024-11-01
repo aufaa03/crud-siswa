@@ -21,7 +21,7 @@ require 'koneksi.php';
                     <div class="row justify-content-center">
                         <div class="col-12">
                             <div class="table-responsive bg-white">
-                                <table class="table mb-0">
+                                <table class="table mb-5">
                                     <thead>
                                         <tr>
                                             <th scope="col">NO daftar</th>
@@ -37,7 +37,6 @@ require 'koneksi.php';
                                     <?php 
                                     $query = "SELECT * FROM siswa";
                                     $hasil = $koneksi->query($query);
-                                    $product = mysqli_num_rows($hasil);
                       while ($data =mysqli_fetch_array($hasil)) {
                                     ?>
                                     <tbody>
@@ -54,6 +53,7 @@ require 'koneksi.php';
                 </tr>
             </tbody>
         </table>
+        <p class="text-center font-bold">Total Data : <?php echo mysqli_num_rows($hasil);?></p>
             </div>
           </div>
         </div>
@@ -62,6 +62,7 @@ require 'koneksi.php';
   </div>
 </div>
 </section>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>

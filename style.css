@@ -5,7 +5,7 @@ body {
     /* Add your background pattern here */
     --sz: 15px;
     --c0: #000;
-    --c1: #1166c7;
+    --c1: #a0a0a0;
     --ts: 50% / calc(var(--sz) * 8) calc(var(--sz) * 16);
     margin: 0;
     padding: 0;
