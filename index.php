@@ -19,13 +19,13 @@
     <div class="container relative mx-auto ">
       <div class="flex flex-wrap">
        <div class="w-full self-center px-4 lg:w-1/2">
-         <h1 class="text-base font-semibold text-neutral-300 md:text-xl drop-shadow-xl">Selamat datang di Penerimaan Peserta Didik Baru</h1>
-         <h2 class="font-bold text-neutral-100 text-4xl mt-3 lg:text-4xldrop-shadow-xl">SMK PGRI 2 TAMAN</h2>
+         <h1 class="text-base font-semibold text-neutral-200 md:text-2xl drop-shadow-xl">Selamat datang di Penerimaan Peserta Didik Baru</h1>
+         <h2 class="font-bold text-neutral-100 text-4xl mt-3 lg:text-4xl drop-shadow-xl">SMK PGRI 2 TAMAN</h2>
          <p class="font-medium text-slate-100 mt-3 mb-10 drop-shadow-xl">Bergabunglah bersama kami untuk meraih pendidikan berkualitas dan membangun masa depan yang gemilang!</p>
          <div class="ml-30">
            
-          <a class="text-base font-semibold text-dark bg-sky-500 rounded hover:shadow-lg hover:opacity:80 transition duration-300 ease-in-out p-2" href="daftar.php">Pendaftaran</a>
-          <a class="text-base font-semibold text-dark bg-sky-500 ml-10 rounded hover:shadow-lg hover:opacity:80 transition duration-300 ease-in-out p-2" href="listSiswa.php">Cek Pendaftaran</a>
+        <a class="text-lg font-semibold text-dark bg-sky-400 rounded hover:shadow-lg hover:opacity:80 transition duration-300 ease-in-out p-4" href="daftar.php">Pendaftaran</a>
+<a class="text-lg font-semibold text-dark bg-sky-400 ml-10 rounded hover:shadow-lg hover:opacity:80 transition duration-300 ease-in-out p-4" href="listSiswa.php">Cek Pendaftaran</a>
          </div>
        </div>
       <div class=" backdrop-blur-sm rounded-full bg-white/30 w-full self-end px-4 lg:w-1/2">
