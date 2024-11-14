@@ -19,12 +19,9 @@ $pecah = $ambil->fetch_assoc();
         <div class="card text-black m-5" style="border-radius: 25px;">
           <div class="card-body">
             <div class="row justify-content-center">
-              <div class="col-md-10 col-lg-6 col-xl-5">
-
+              <div class="col-md-10 col-lg-6 col-xl-5">   
                 <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Edit Siswa</p>
-
                 <form action="#" method="POST">
-
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div data-mdb-input-init class="form-outline flex-fill mb-0">
