@@ -6,14 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>PPDB SEKOLAH</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 
 </head>
 <body>
   <nav class="bg-transparent top-0 left-0 w-full absolute z-20">
-    <!-- <div class="container mx-auto">
-      <img class="drop-shadow-2xl" src="assets/download.png" alt="" width="150px" height="150px" />
-    </div> -->
   </nav>
   <section class="mt-3">
     <div class="container relative mx-auto ">
@@ -25,6 +24,7 @@
          <div class="ml-30">
            
         <a class="text-lg font-semibold text-dark bg-cyan-400 rounded hover:shadow-lg hover:opacity:80 transition duration-300 ease-in-out p-4" href="daftar.php">Pendaftaran</a>
+        
 <a class="text-lg font-semibold text-dark bg-cyan-400 ml-10 rounded hover:shadow-lg hover:opacity:80 transition duration-300 ease-in-out p-4" href="listSiswa.php">Cek Pendaftaran</a>
          </div>
        </div>
@@ -39,6 +39,7 @@
   </section>
  
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="/assets/js/app.js"></script>
 </body>
 </html>
 <?php

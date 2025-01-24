@@ -84,7 +84,8 @@ $pecah = $ambil->fetch_assoc();
                   </div>
                 
 
-                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                  <div class="d-flex justify-content-between mx-4 mb-3 mb-lg-4">
+                    <a href="listSiswa.php" class="btn btn-secondary text-center btn-lg">Kembali</a>
                     <button  type="submit" name="ubah" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg">Ubah</button>
                   </div>
                 </form>
