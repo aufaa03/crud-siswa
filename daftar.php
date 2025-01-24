@@ -6,104 +6,83 @@ require 'koneksi.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Pendaftaran Siswa</title>
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-<body>
-<section style="background-color: #eee;">
-  <div class="container h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-lg-10">
-        <div class="card text-black m-5" style="border-radius: 25px;">
-          <div class="card-body">
-            <div class="row justify-content-center">
-              <div class="col-md-10">
+<body class="bg-light">
 
-                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Pendaftaran</p>
-
-                <form action="#" method="POST">
-
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                    <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                      <label class="form-label" for="form3Example1c">Nama</label>
-                      <input type="text" name="nama" id="form3Example1c" class="form-control" required />
-                    </div>
-                  </div>
-                  
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                    <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                      <label class="form-label" for="form3Example1c">Jenis Kelamin</label>
-                    <select class="form-select" name="jk" aria-label="Default select example" required>
-                        <option selected>pilih</option>
-                        <option value="Laki-Laki">Laki-Laki</option>
-                        <option value="perempuan">perempuan</option>
-                    </select>
-                  </div>
-                </div>
-                
-                <div class="d-flex flex-row align-items-center mb-4">
-                  <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                  <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                    <label class="form-label" for="form3Example4c">Agama</label>
-                    <select class="form-select" name="agama" aria-label="Default select example">
-                        <option selected>pilih</option>
-                        <option value="Islam">Islam</option>
-                        <option value="Kristen">Kristen</option>
-                        <option value="Katolik">Katolik</option>
-                        <option value="Hindu">Hindu</option>
-                        <option value="Buddha">Buddha </option>
-                    </select>
-                    </div>
-                  </div>
-
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                    <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                      <label class="form-label" for="form3Example4cd">Asal Sekolah</label>
-                      <input type="text" name="asal_sekolah" id="form3Example4cd" required class="form-control" />
-                    </div>
-                  </div>
-                  
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                    <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                      <label class="form-label" for="form3Example4cd">Alamat</label>
-                      <textarea class="form-control" required name="alamat" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                  </div>
-                  
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                    <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                      <label class="form-label" for="form3Example4cd">Nomer HP</label>
-                      <input type="number" required name="no_hp" id="form3Example4cd" class="form-control" />
-                    </div>
-                  </div>
-                
-
-                  <div class="d-flex justify-content-between mx-4 mb-3 mb-lg-4">
-                    <a href="index.php" class="btn btn-secondary btn-lg">Kembali</a>
-                    <button  type="submit" name="daftar" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg">Daftar</button>
-                    
-                  </div>
-                </form>
+<section class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card shadow-lg border-0">
+          <div class="card-body p-5">
+            <h2 class="text-center mb-4 text-primary">Pendaftaran Siswa Baru</h2>
+            <form action="#" method="POST">
+              
+              <!-- Nama -->
+              <div class="mb-3">
+                <label for="nama" class="form-label fw-bold">Nama Lengkap</label>
+                <input type="text" class="form-control form-control-lg" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
               </div>
-              <!-- <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-                <img src="assets/images.jfif"
-                  class="img-fluid" alt="Sample image">
-              </div> -->
-            </div>
+
+              <!-- Jenis Kelamin -->
+              <div class="mb-3">
+                <label for="jk" class="form-label fw-bold">Jenis Kelamin</label>
+                <select class="form-select form-select-lg" id="jk" name="jk" required>
+                  <option value="" disabled selected>Pilih jenis kelamin</option>
+                  <option value="Laki-Laki">Laki-Laki</option>
+                  <option value="Perempuan">Perempuan</option>
+                </select>
+              </div>
+
+              <!-- Agama -->
+              <div class="mb-3">
+                <label for="agama" class="form-label fw-bold">Agama</label>
+                <select class="form-select form-select-lg" id="agama" name="agama" required>
+                  <option value="" disabled selected>Pilih agama</option>
+                  <option value="Islam">Islam</option>
+                  <option value="Kristen">Kristen</option>
+                  <option value="Katolik">Katolik</option>
+                  <option value="Hindu">Hindu</option>
+                  <option value="Buddha">Buddha</option>
+                </select>
+              </div>
+
+              <!-- Asal Sekolah -->
+              <div class="mb-3">
+                <label for="asal_sekolah" class="form-label fw-bold">Asal Sekolah</label>
+                <input type="text" class="form-control form-control-lg" id="asal_sekolah" name="asal_sekolah" placeholder="Masukkan asal sekolah" required>
+              </div>
+
+              <!-- Alamat -->
+              <div class="mb-3">
+                <label for="alamat" class="form-label fw-bold">Alamat</label>
+                <textarea class="form-control form-control-lg" id="alamat" name="alamat" rows="3" placeholder="Masukkan alamat lengkap" required></textarea>
+              </div>
+
+              <!-- Nomor HP -->
+              <div class="mb-4">
+                <label for="no_hp" class="form-label fw-bold">Nomor HP</label>
+                <input type="number" class="form-control form-control-lg" id="no_hp" name="no_hp" placeholder="Masukkan nomor HP aktif" required>
+              </div>
+
+              <!-- Buttons -->
+              <div class="d-flex justify-content-between">
+                <a href="index.php" class="btn btn-secondary btn-lg">Kembali</a>
+                <button type="submit" name="daftar" class="btn btn-primary btn-lg">Daftar</button>
+              </div>
+
+            </form>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 <?php
@@ -114,23 +93,16 @@ if (isset($_POST['daftar'])) {
   $asl_sklh = $_POST['asal_sekolah'];
   $alamat = $_POST['alamat'];
   $hp = $_POST['no_hp'];
-  //query
-   $query = "INSERT INTO siswa (nama, jk, agama, sekolah_asal, alamat, no_hp)
-             VALUES ('$nama', '$jk', '$agama', '$asl_sklh', '$alamat', '$hp')";
-   $simpan = $koneksi->query($query);
-   if ($simpan) {
-    echo '<script>
-       window.location.href = "index.php?status=sukses";
-</script>';
-// header(`location : index.php`);
- } else {
 
-   echo '<script>
-   window.location.href = "index.php?status=gagal";
-   </script>';
-   }
+  // Query untuk menyimpan data
+  $query = "INSERT INTO siswa (nama, jk, agama, sekolah_asal, alamat, no_hp)
+            VALUES ('$nama', '$jk', '$agama', '$asl_sklh', '$alamat', '$hp')";
+  $simpan = $koneksi->query($query);
+  
+  if ($simpan) {
+    echo '<script>window.location.href = "index.php?status=sukses";</script>';
+  } else {
+    echo '<script>window.location.href = "index.php?status=gagal";</script>';
+  }
 }
-
-
-
 ?>

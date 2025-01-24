@@ -5,62 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>PPDB SEKOLAH</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="assets/css/style.css">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-<body>
-  <nav class="bg-transparent top-0 left-0 w-full absolute z-20">
+<body class="bg-gradient-to-br from-blue-900 via-blue-700 to-cyan-500 min-h-screen text-white">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-800 bg-opacity-80 shadow-lg fixed top-0 left-0 w-full z-20">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl font-bold text-white">PPDB SMK PGRI 2 TAMAN</h1>
+    </div>
   </nav>
-  <section class="mt-3">
-    <div class="container relative mx-auto ">
-      <div class="flex flex-wrap">
-       <div class="w-full self-center px-4 lg:w-1/2 ">
-         <h1 class="text-base font-semibold text-neutral-200 md:text-2xl drop-shadow-xl">Selamat datang di Penerimaan Peserta Didik Baru</h1>
-         <h2 class="font-bold text-neutral-100 text-4xl mt-3 lg:text-4xl font-sans drop-shadow-xl">SMK PGRI 2 TAMAN</h2>
-         <p class="font-medium text-slate-100 mt-3 mb-10 drop-shadow-xl">Bergabunglah bersama kami untuk meraih pendidikan berkualitas dan membangun masa depan yang gemilang!</p>
-         <div class="ml-30">
-           
-        <a class="text-lg font-semibold text-dark bg-cyan-400 rounded hover:shadow-lg hover:opacity:80 transition duration-300 ease-in-out p-4" href="daftar.php">Pendaftaran</a>
-        
-<a class="text-lg font-semibold text-dark bg-cyan-400 ml-10 rounded hover:shadow-lg hover:opacity:80 transition duration-300 ease-in-out p-4" href="listSiswa.php">Cek Pendaftaran</a>
-         </div>
-       </div>
-      <div class=" backdrop-blur-sm rounded-full bg-white/30 w-full self-end px-4 lg:w-1/2">
-        <div class=" lg:right-0 mt-5">
-          
-        <img class="max-w-full mx-auto rounded-lg drop-shadow-xl" src="assets/20240925_080154.png" alt="" />
+
+  <!-- Hero Section -->
+  <section class="mt-20">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-wrap items-center">
+        <!-- Left Content -->
+        <div class="w-full lg:w-1/2 mb-10 lg:mb-0">
+          <h1 class="text-4xl font-bold text-white md:text-5xl drop-shadow-lg">Selamat Datang di Penerimaan Peserta Didik Baru</h1>
+          <h2 class="text-2xl font-semibold text-blue-100 mt-4">SMK PGRI 2 TAMAN</h2>
+          <p class="mt-4 text-lg leading-relaxed text-blue-200">
+            Bergabunglah bersama kami untuk meraih pendidikan berkualitas dan membangun masa depan yang gemilang!
+          </p>
+          <div class="mt-8 flex gap-4">
+            <a href="daftar.php" class="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg shadow-lg font-medium transition duration-300 ease-in-out">
+              Pendaftaran
+            </a>
+            <a href="listSiswa.php" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg font-medium transition duration-300 ease-in-out">
+              Cek Pendaftaran
+            </a>
+          </div>
         </div>
-      </div>
+
+        <!-- Right Image -->
+        <div class="w-full lg:w-1/2 flex justify-center">
+          <img class="max-w-full rounded-lg drop-shadow-lg" src="assets/20240925_080154.png" alt="Penerimaan Peserta Didik Baru">
+        </div>
       </div>
     </div>
   </section>
- 
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="/assets/js/app.js"></script>
+
+  <!-- Footer -->
+  <footer class="mt-20 bg-blue-800 bg-opacity-90 py-6 text-center">
+    <p class="text-blue-200">&copy; 2025 PPDB SMK PGRI 2 TAMAN. All Rights Reserved.</p>
+  </footer>
+
+  <!-- SweetAlert Script -->
+  <?php
+  if(isset($_GET['status'])) {
+    if($_GET['status'] == 'sukses') {
+      echo '<script>
+      Swal.fire({
+        title: "Pendaftaran Berhasil!",
+        text: "Silahkan cek di halaman Cek Pendaftaran.",
+        icon: "success",
+        confirmButtonColor: "#3085d6"
+      });
+      </script>';
+    } else {
+      echo '<script>
+      Swal.fire({
+        title: "Pendaftaran Gagal!",
+        text: "Silahkan melakukan daftar ulang.",
+        icon: "error",
+        confirmButtonColor: "#d33"
+      });
+      </script>';
+    }
+  }
+  ?>
 </body>
 </html>
-<?php
-if(isset($_GET['status'])) {
-
-  if($_GET['status'] == 'sukses') {
-    echo '<script>
-    Swal.fire({
-      title: "Pendaftaran Berhasil",
-      text: "silahkan cek dihalaman cek pendaftaran",
-      icon: "success"
-      });
-</script>';
-  } else {
-    echo '<script>
-    Swal.fire({
-      title: "Pendaftaran Gagal",
-      text: "silahkan Melakukan Daftar ulang",
-      icon: "error"
-      });
-</script>';
-  }
-}
-?>
